@@ -16,8 +16,8 @@ CC = gcc
 CFLAGS = -Wall -O -g 
 
 #Version materielle
-INCLDIRS = -I .
-LIBDIRS = 
+INCLDIRS = -I . -I /shared/TCii/include
+LIBDIRS = -L /shared/TCii/lib
 
 #dependance librairie libsmartcard_borne (voir git)
 LIBS64 = -lsmartcard_borne_x64 -lpcsclite
@@ -27,10 +27,11 @@ SRCS = lecteurcarte.c borne.c
 OBJS = ${SRCS:.c=.o} 
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) $(INCLDIRS) -o $@ $(OBJS) $(LIBS64)
+	$(CC) $(CFLAGS) $(INCLDIRS) $(LIBDIRS) -o $@ $(OBJS) $(LIBS64)
 
 $(OBJS):
-	$(CC) $(CFLAGS) $(INCLDIRS) -c $*.c
+	$(CC) $(CFLAGS) $(INCLDIRS) $(LIBDIRS) -c $*.c
+
 
 depend:
 	$(CC) -MM $(SRCS) $(INCLDIRS) > Makefile.dep
