@@ -1,0 +1,6 @@
+touch Makefile
+make depend
+make clean
+make
+sim_borne &
+ipcclean

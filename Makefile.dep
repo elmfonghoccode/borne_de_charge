@@ -1,0 +1,26 @@
+borne.o: borne.c /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/donnees_borne.h lecteurcarte.h \
+ /shared/TCii/include/lcarte.h /shared/TCii/include/mem_sh.h \
+ /shared/TCii/include/donnees.h /shared/TCii/include/donnees.h voyants.h \
+ base_clients.h generateur_save.h
+lecteurcarte.o: lecteurcarte.c lecteurcarte.h \
+ /shared/TCii/include/lcarte.h /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/donnees_borne.h /shared/TCii/include/mem_sh.h \
+ /shared/TCii/include/donnees.h /shared/TCii/include/donnees.h voyants.h \
+ base_clients.h generateur_save.h
+base_clients.o: base_clients.c base_clients.h \
+ /shared/TCii/include/lcarte.h /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/donnees_borne.h
+voyants.o: voyants.c voyants.h /shared/TCii/include/lcarte.h \
+ /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/donnees_borne.h /shared/TCii/include/mem_sh.h \
+ /shared/TCii/include/donnees.h /shared/TCii/include/donnees.h
+generateur_save.o: generateur_save.c generateur_save.h \
+ /shared/TCii/include/lcarte.h /shared/TCii/include/memoire_borne.h \
+ /shared/TCii/include/donnees_borne.h \
+ /shared/TCii/include/donnees_borne.h /shared/TCii/include/mem_sh.h \
+ /shared/TCii/include/donnees.h /shared/TCii/include/donnees.h voyants.h
